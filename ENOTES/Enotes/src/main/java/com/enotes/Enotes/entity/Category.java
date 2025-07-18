@@ -14,10 +14,12 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Category extends BaseModel{
     @Id
-    @GeneratedValue(strategy  = GenerationType.IDENTITY)
-    private Integer id;
+    @GeneratedValue(strategy  = GenerationType.UUID)
+    private String id;
 
+    @Column(nullable = false, unique = true)
     private String name;
+
     private String description;
 
 }
