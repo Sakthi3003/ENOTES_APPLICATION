@@ -9,4 +9,6 @@ public interface CategoryService {
     Boolean saveCategory(AddCategoryDTO category);
     List<CategoryDto> getAllCategories();
     List<CategoryDto> getAllActiveCategories();
+    CategoryDto getCategoryDetailsById(String categoryId);
+    Boolean deleteCategoryById(String categoryId);
 }
