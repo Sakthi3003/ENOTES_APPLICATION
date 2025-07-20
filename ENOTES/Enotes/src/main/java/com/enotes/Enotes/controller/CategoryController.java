@@ -2,6 +2,7 @@ package com.enotes.Enotes.controller;
 
 import com.enotes.Enotes.dto.AddCategoryDTO;
 import com.enotes.Enotes.dto.CategoryDto;
+import com.enotes.Enotes.dto.UpdateCategoryDto;
 import com.enotes.Enotes.entity.Category;
 import com.enotes.Enotes.service.CategoryService;
 import lombok.RequiredArgsConstructor;
@@ -56,6 +57,16 @@ public class CategoryController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(categoryDto, HttpStatus.OK);
+    }
+
+    @PutMapping
+    public ResponseEntity<?> updateCategory(@RequestBody UpdateCategoryDto category) {
+        CategoryDto updatedCategoryDto = categoryService.updateCategory(category);
+        if(ObjectUtils.isEmpty(updatedCategoryDto)) {
+            return new ResponseEntity<>("Category with id not found " + category.getId(),HttpStatus.NOT_FOUND);
+        }else{
+            return new ResponseEntity<>(updatedCategoryDto, HttpStatus.OK);
+        }
     }
 
     @DeleteMapping("{id}")
