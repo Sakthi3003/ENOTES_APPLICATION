@@ -2,6 +2,7 @@ package com.enotes.Enotes.service.impl;
 
 import com.enotes.Enotes.dto.AddCategoryDTO;
 import com.enotes.Enotes.dto.CategoryDto;
+import com.enotes.Enotes.dto.UpdateCategoryDto;
 import com.enotes.Enotes.entity.Category;
 import com.enotes.Enotes.repository.CategoryRepository;
 import com.enotes.Enotes.service.CategoryService;
@@ -24,12 +25,9 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public Boolean saveCategory(AddCategoryDTO categoryDto) {
-        Category category = new Category();
-        category.setName(categoryDto.getName().trim());
-        category.setDescription(categoryDto.getDescription().trim());
-        category.setCreatedBy(1);
-        Category savedCategory = categoryRepository.save(category);
-        if(ObjectUtils.isEmpty(savedCategory)) {
+        Category category = modelMapper.map(categoryDto, Category.class);
+        if(ObjectUtils.isEmpty(category.getId())) {
+            category.setCreatedBy(1);
             return false;
         }
         return true;
@@ -43,6 +41,20 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryDtos;
     }
 
+    public CategoryDto updateCategory(UpdateCategoryDto categoryDto) {
+        Category category = categoryRepository.findById(categoryDto.getId()).orElse(null);
+        if(ObjectUtils.isEmpty(category)) {
+            return null;
+        }else{
+            if(!category.getName().equals(categoryDto.getName())) {
+                category.setName(categoryDto.getName());
+            }
+            category.setDescription(categoryDto.getDescription());
+            return modelMapper.map(categoryRepository.save(category), CategoryDto.class);
+        }
+    }
+
+
     @Override
     public List<CategoryDto> getAllActiveCategories() {
         List<Category> categories = categoryRepository.findByIsActiveTrueAndIsDeletedFalse();
@@ -51,6 +63,8 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryDtos;
 
     }
+
+
 
     @Override
     public CategoryDto getCategoryDetailsById(String categoryId) {
