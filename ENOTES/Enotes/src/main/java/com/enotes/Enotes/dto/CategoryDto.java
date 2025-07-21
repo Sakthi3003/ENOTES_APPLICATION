@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 @Getter
@@ -20,4 +21,7 @@ public class CategoryDto {
     private Boolean isActive;
     private Boolean isDeleted;
     private Integer createdBy;
+    private LocalDateTime createdAt;
+    private Integer updatedBy;
+    private LocalDateTime updatedAt;
 }

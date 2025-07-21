@@ -4,6 +4,7 @@ import com.enotes.Enotes.dto.AddCategoryDTO;
 import com.enotes.Enotes.dto.CategoryDto;
 import com.enotes.Enotes.dto.UpdateCategoryDto;
 import com.enotes.Enotes.entity.Category;
+import com.enotes.Enotes.exception.CategoryNotFoundException;
 import com.enotes.Enotes.repository.CategoryRepository;
 import com.enotes.Enotes.service.CategoryService;
 import lombok.RequiredArgsConstructor;
@@ -42,7 +43,8 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     public CategoryDto updateCategory(UpdateCategoryDto categoryDto) {
-        Category category = categoryRepository.findById(categoryDto.getId()).orElse(null);
+        Category category = categoryRepository.findById(categoryDto.getId())
+                .orElseThrow(() -> new CategoryNotFoundException("Category with id " +categoryDto.getId() + " not found"));
         if(ObjectUtils.isEmpty(category)) {
             return null;
         }else{
@@ -68,20 +70,19 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public CategoryDto getCategoryDetailsById(String categoryId) {
-        Category category = categoryRepository.findByIdAndIsDeletedFalse(categoryId).orElse(null);
-        if(ObjectUtils.isEmpty(category)) {
-            return null;
-        }
+        Category category = categoryRepository.findByIdAndIsDeletedFalse(categoryId)
+                .orElseThrow(() -> new CategoryNotFoundException("Category with id " +categoryId + " not found"));
         CategoryDto categoryDto = modelMapper.map(category, CategoryDto.class);
+        categoryDto.setCreatedAt(category.getCreatedAt());
+        categoryDto.setUpdatedAt(category.getUpdatedAt());
+        categoryDto.setUpdatedBy(category.getUpdatedBy());
         return categoryDto;
     }
 
     @Override
     public Boolean deleteCategoryById(String categoryId) {
-        Category category = categoryRepository.findById(categoryId).orElse(null);
-        if(ObjectUtils.isEmpty(category)) {
-            return false;
-        }
+        Category category = categoryRepository.findById(categoryId)
+                .orElseThrow(() -> new CategoryNotFoundException("Category with id " +categoryId + " not found"));
         if(category.getIsDeleted() == true){
             return false;
         }
