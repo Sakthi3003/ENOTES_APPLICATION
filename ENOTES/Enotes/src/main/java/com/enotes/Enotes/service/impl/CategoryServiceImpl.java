@@ -7,6 +7,7 @@ import com.enotes.Enotes.entity.Category;
 import com.enotes.Enotes.exception.CategoryNotFoundException;
 import com.enotes.Enotes.repository.CategoryRepository;
 import com.enotes.Enotes.service.CategoryService;
+import com.enotes.Enotes.util.CategoryValidation;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -21,8 +22,11 @@ public class CategoryServiceImpl implements CategoryService {
 
     private final ModelMapper modelMapper;
 
+    private final CategoryValidation  categoryValidation;
+
     @Override
     public Boolean saveCategory(AddCategoryDTO categoryDto) {
+        categoryValidation.categoryValidation(categoryDto);
         Category category = modelMapper.map(categoryDto, Category.class);
         if(ObjectUtils.isEmpty(category.getId())) {
             category.setCreatedBy(1);
