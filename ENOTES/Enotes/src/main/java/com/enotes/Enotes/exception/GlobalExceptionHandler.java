@@ -34,7 +34,7 @@ public class GlobalExceptionHandler {
         ExceptionResponse response = new ExceptionResponse();
         response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
         response.setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
-        response.setMessage("Something went wrong: " + ex.getMessage());
+        response.setMessage(ex.getMessage());
         response.setTimestamp(LocalDateTime.now());
         return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
     }

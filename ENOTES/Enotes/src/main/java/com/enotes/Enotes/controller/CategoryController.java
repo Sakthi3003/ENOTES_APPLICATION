@@ -32,7 +32,7 @@ public class CategoryController {
     }
 
     @PostMapping
-    public ResponseEntity<?> saveCategory(@Valid @RequestBody AddCategoryDTO category) {
+    public ResponseEntity<?> saveCategory(@RequestBody AddCategoryDTO category) {
         Boolean savedCategory = categoryService.saveCategory(category);
 
         if(savedCategory) {
