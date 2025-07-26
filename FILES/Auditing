@@ -1,0 +1,37 @@
+Spring Auditing 
+
+It track who and what they changes with the timestamp
+
+
+STEP 1:
+go to main class @EnableJpaAuditing
+
+STEP 2:
+@EntityListener(AuditingEntityListener.class)
+
+@CreaterBy
+@CreatedDate
+@LastModifiedBy
+@LastModifiedDate
+
+
+At the created Data, make @Column(updatable = false)
+
+At the update date, make @Column(insertable = false)
+
+
+Create A config file inside the config package named
+
+public class AuditorConfig implements AuditorAware<Integer>{
+  @Override
+  public optional<Integer> getCurrentAuditor(){
+    return Optional.of(1):
+
+}}
+
+
+
+
+public AuditAware<Integer> awareRef(){
+  return new AuditorConfig();
+}
