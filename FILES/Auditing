@@ -4,7 +4,7 @@ It track who and what they changes with the timestamp
 
 
 STEP 1:
-go to main class @EnableJpaAuditing
+go to main class @EnableJpaAuditing(auditorAwareRef = "auditorProvider")
 
 STEP 2:
 @EntityListener(AuditingEntityListener.class)
@@ -35,3 +35,142 @@ public class AuditorConfig implements AuditorAware<Integer>{
 public AuditAware<Integer> awareRef(){
   return new AuditorConfig();
 }
+
+
+
+Sure Sahi! Let's break down **Spring Data JPA Auditing** step by step and correct your configuration with explanations. ✨
+
+---
+
+## 🔍 What is **Spring Auditing**?
+
+**Spring Data JPA Auditing** helps you **automatically track**:
+
+* **Who** created or updated an entity
+* **When** it was created or updated
+
+This is very useful in real-world applications for **audit trails**—to monitor data changes over time.
+
+---
+
+## ✅ Example Use Case
+
+You want to store in each DB record:
+
+* `createdBy`, `createdDate`
+* `lastModifiedBy`, `lastModifiedDate`
+
+Instead of manually setting them every time, Spring will automatically populate them.
+
+---
+
+## ✅ Steps to Enable Spring Auditing
+
+---
+
+### 🟩 **STEP 1: Enable Auditing in Main Class**
+
+Add the annotation:
+
+```java
+@SpringBootApplication
+@EnableJpaAuditing(auditorAwareRef = "auditorProvider") // "auditorProvider" is the bean name
+public class YourApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(YourApplication.class, args);
+    }
+}
+```
+
+---
+
+### 🟩 **STEP 2: Add Audit Fields to Entity**
+
+```java
+@Entity
+@EntityListeners(AuditingEntityListener.class)
+public class MyEntity {
+
+    @CreatedBy
+    @Column(updatable = false)
+    private Integer createdBy;
+
+    @CreatedDate
+    @Column(updatable = false)
+    private LocalDateTime createdDate;
+
+    @LastModifiedBy
+    @Column(insertable = false)
+    private Integer modifiedBy;
+
+    @LastModifiedDate
+    @Column(insertable = false)
+    private LocalDateTime modifiedDate;
+
+    // other fields, getters/setters
+}
+```
+
+> ✅ `@CreatedDate` and `@CreatedBy` → set only when entity is created
+> ✅ `@LastModifiedDate` and `@LastModifiedBy` → set whenever the entity is updated
+
+---
+
+### 🟩 **STEP 3: Provide Auditor Info**
+
+Create a class that tells Spring **who is the current user** (i.e., `createdBy`, `modifiedBy`).
+
+```java
+@Configuration
+public class AuditorConfig {
+
+    @Bean
+    public AuditorAware<Integer> auditorProvider() {
+        return new AuditorAwareImpl();
+    }
+}
+```
+
+Now, create the implementation:
+
+```java
+public class AuditorAwareImpl implements AuditorAware<Integer> {
+
+    @Override
+    public Optional<Integer> getCurrentAuditor() {
+        // Example: return static user ID = 1
+        return Optional.of(1);
+
+        // In real projects: fetch from SecurityContext
+        // return Optional.of(SecurityContextHolder.getContext().getAuthentication().getName());
+    }
+}
+```
+
+---
+
+## ✅ Final Summary
+
+| Annotation              | Meaning                           |
+| ----------------------- | --------------------------------- |
+| `@EnableJpaAuditing`    | Enables auditing support          |
+| `@EntityListeners(...)` | Hooks entity lifecycle            |
+| `@CreatedDate`          | Auto-filled creation timestamp    |
+| `@CreatedBy`            | Auto-filled creator ID            |
+| `@LastModifiedDate`     | Auto-filled last update timestamp |
+| `@LastModifiedBy`       | Auto-filled modifier ID           |
+
+---
+
+## 💡 Tip
+
+* If using Spring Security, you can return the current user dynamically:
+
+```java
+Optional.of(SecurityContextHolder.getContext().getAuthentication().getName());
+```
+
+---
+
+Let me know if you want a working code demo or GitHub sample!
+
