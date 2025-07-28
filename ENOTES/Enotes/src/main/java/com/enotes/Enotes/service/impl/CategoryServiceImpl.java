@@ -26,14 +26,22 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public Boolean saveCategory(AddCategoryDTO categoryDto) {
-        categoryValidation.categoryValidation(categoryDto);
-        Category category = modelMapper.map(categoryDto, Category.class);
-        if(ObjectUtils.isEmpty(category.getId())) {
-            category.setCreatedBy(1);
+        try {
+            categoryValidation.categoryValidation(categoryDto);
+
+            Category category = modelMapper.map(categoryDto, Category.class);
+
+            category.setCreatedBy(1); // Set creator
+            categoryRepository.save(category); // Persist to DB
+
+            return true;
+        } catch (Exception e) {
+            // Log the error for debugging
+            System.err.println("Error while saving category: " + e.getMessage());
             return false;
         }
-        return true;
     }
+
 
     @Override
     public List<CategoryDto> getAllCategories() {
