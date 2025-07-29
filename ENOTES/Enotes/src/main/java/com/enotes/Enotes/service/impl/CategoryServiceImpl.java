@@ -5,6 +5,7 @@ import com.enotes.Enotes.dto.CategoryDto;
 import com.enotes.Enotes.dto.UpdateCategoryDto;
 import com.enotes.Enotes.entity.Category;
 import com.enotes.Enotes.exception.CategoryNotFoundException;
+import com.enotes.Enotes.exception.ExistDataException;
 import com.enotes.Enotes.repository.CategoryRepository;
 import com.enotes.Enotes.service.CategoryService;
 import com.enotes.Enotes.util.CategoryValidation;
@@ -29,6 +30,10 @@ public class CategoryServiceImpl implements CategoryService {
         try {
             categoryValidation.categoryValidation(categoryDto);
 
+            boolean exist = categoryRepository.existsByName(categoryDto.getName().trim());
+            if(exist){
+                throw new ExistDataException("Category already exists");
+            }
             Category category = modelMapper.map(categoryDto, Category.class);
 
             category.setCreatedBy(1); // Set creator
