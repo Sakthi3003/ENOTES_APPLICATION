@@ -37,7 +37,10 @@ Assign priority levels to tasks (Low, Medium, High)
 Set task statuses like "To-Do", "In Progress", and "Completed".
 Set reminders for upcoming tasks (push notifications, email reminders).
 
-
+Best practices 
+Global Exception handling 
+Auditing 
+Maintaining solid principle
 Thank You
 
 
