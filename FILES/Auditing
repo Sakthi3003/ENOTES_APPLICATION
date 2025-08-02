@@ -2,7 +2,6 @@ Spring Auditing
 
 It track who and what they changes with the timestamp
 
-
 STEP 1:
 go to main class @EnableJpaAuditing(auditorAwareRef = "auditorProvider")
 
@@ -169,8 +168,4 @@ public class AuditorAwareImpl implements AuditorAware<Integer> {
 ```java
 Optional.of(SecurityContextHolder.getContext().getAuthentication().getName());
 ```
-
----
-
-Let me know if you want a working code demo or GitHub sample!
 
