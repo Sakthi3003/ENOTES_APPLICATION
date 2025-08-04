@@ -22,7 +22,11 @@ public class GlobalExceptionHandler {
         exceptionResponse.setStatus(exception.getHttpStatus());
         exceptionResponse.setStatusCode(exception.getHttpStatus().value());
         exceptionResponse.setTimestamp(LocalDateTime.now());
+<<<<<<< Updated upstream
         return CommonUtil.createErrorResponse(, HttpStatus.BAD_REQUEST, exception.getMessage());
+=======
+        return CommonUtil.createErrorResponse(exceptionResponse, HttpStatus.BAD_REQUEST, exception.getMessage());
+>>>>>>> Stashed changes
     }
 
     // Handle any other unexpected exception

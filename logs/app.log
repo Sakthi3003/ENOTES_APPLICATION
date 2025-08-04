@@ -26441,3 +26441,77 @@ Unconditional classes:
 2025-08-04 22:26:03,792 - com.zaxxer.hikari.pool.HikariPool - [fillPool] - (DEBUG) - HikariPool-6 - Fill pool skipped, pool has sufficient level or currently being filled. - 
 2025-08-04 22:26:33,803 - com.zaxxer.hikari.pool.HikariPool - [logPoolState] - (DEBUG) - HikariPool-6 - Pool stats (total=10/10, idle=10/10, active=0, waiting=0) - 
 2025-08-04 22:26:33,803 - com.zaxxer.hikari.pool.HikariPool - [fillPool] - (DEBUG) - HikariPool-6 - Fill pool skipped, pool has sufficient level or currently being filled. - 
+<<<<<<< Updated upstream
+=======
+2025-08-04 22:27:03,821 - com.zaxxer.hikari.pool.HikariPool - [logPoolState] - (DEBUG) - HikariPool-6 - Pool stats (total=10/10, idle=10/10, active=0, waiting=0) - 
+2025-08-04 22:27:03,822 - com.zaxxer.hikari.pool.HikariPool - [fillPool] - (DEBUG) - HikariPool-6 - Fill pool skipped, pool has sufficient level or currently being filled. - 
+2025-08-04 22:27:11,163 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@51f532bc is alive - 
+2025-08-04 22:27:12,302 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@4fffa65a is alive - 
+2025-08-04 22:27:15,736 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@60dff284 is alive - 
+2025-08-04 22:27:20,750 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@62993747 is alive - 
+2025-08-04 22:27:24,262 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@4bef18a is alive - 
+2025-08-04 22:27:24,987 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@f00dcb is alive - 
+2025-08-04 22:27:27,552 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@3f84fd46 is alive - 
+2025-08-04 22:27:29,897 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@39cf7be5 is alive - 
+2025-08-04 22:27:32,296 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@57fd3552 is alive - 
+2025-08-04 22:27:33,398 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@21e2f8bf is alive - 
+2025-08-04 22:27:33,831 - com.zaxxer.hikari.pool.HikariPool - [logPoolState] - (DEBUG) - HikariPool-6 - Pool stats (total=10/10, idle=10/10, active=0, waiting=0) - 
+2025-08-04 22:27:33,831 - com.zaxxer.hikari.pool.HikariPool - [fillPool] - (DEBUG) - HikariPool-6 - Fill pool skipped, pool has sufficient level or currently being filled. - 
+2025-08-04 22:28:03,849 - com.zaxxer.hikari.pool.HikariPool - [logPoolState] - (DEBUG) - HikariPool-6 - Pool stats (total=10/10, idle=10/10, active=0, waiting=0) - 
+2025-08-04 22:28:03,853 - com.zaxxer.hikari.pool.HikariPool - [fillPool] - (DEBUG) - HikariPool-6 - Fill pool skipped, pool has sufficient level or currently being filled. - 
+2025-08-04 22:28:33,868 - com.zaxxer.hikari.pool.HikariPool - [logPoolState] - (DEBUG) - HikariPool-6 - Pool stats (total=10/10, idle=10/10, active=0, waiting=0) - 
+2025-08-04 22:28:33,868 - com.zaxxer.hikari.pool.HikariPool - [fillPool] - (DEBUG) - HikariPool-6 - Fill pool skipped, pool has sufficient level or currently being filled. - 
+2025-08-04 22:28:48,430 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@51f532bc is alive - 
+2025-08-04 22:28:50,445 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@4fffa65a is alive - 
+2025-08-04 22:28:57,636 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@60dff284 is alive - 
+2025-08-04 22:29:03,878 - com.zaxxer.hikari.pool.HikariPool - [logPoolState] - (DEBUG) - HikariPool-6 - Pool stats (total=10/10, idle=10/10, active=0, waiting=0) - 
+2025-08-04 22:29:03,881 - com.zaxxer.hikari.pool.HikariPool - [fillPool] - (DEBUG) - HikariPool-6 - Fill pool skipped, pool has sufficient level or currently being filled. - 
+2025-08-04 22:29:07,279 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@62993747 is alive - 
+2025-08-04 22:29:14,484 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@4bef18a is alive - 
+2025-08-04 22:29:16,027 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@f00dcb is alive - 
+2025-08-04 22:29:21,105 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@3f84fd46 is alive - 
+2025-08-04 22:29:25,698 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@39cf7be5 is alive - 
+2025-08-04 22:29:30,924 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@57fd3552 is alive - 
+2025-08-04 22:29:33,011 - com.zaxxer.hikari.pool.HikariPool - [run] - (DEBUG) - HikariPool-6 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@21e2f8bf is alive - 
+2025-08-04 22:29:33,897 - com.zaxxer.hikari.pool.HikariPool - [logPoolState] - (DEBUG) - HikariPool-6 - Pool stats (total=10/10, idle=10/10, active=0, waiting=0) - 
+2025-08-04 22:29:33,897 - com.zaxxer.hikari.pool.HikariPool - [fillPool] - (DEBUG) - HikariPool-6 - Fill pool skipped, pool has sufficient level or currently being filled. - 
+2025-08-04 22:30:00,950 - org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - [onApplicationEvent] - (INFO) - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) - 
+2025-08-04 22:30:00,957 - org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - [onApplicationEvent] - (DEBUG) - Change set: [D:\ENOTES\ENOTES_APPLICATION\ENOTES\Enotes\target\classes [D:\ENOTES\ENOTES_APPLICATION\ENOTES\Enotes\target\classes\log4j2.xml (MODIFY)]] - 
+2025-08-04 22:30:00,966 - org.springframework.boot.devtools.restart.Restarter - [restart] - (DEBUG) - Restarting application - 
+2025-08-04 22:30:00,972 - org.springframework.boot.devtools.restart.Restarter - [stop] - (DEBUG) - Stopping application - 
+2025-08-04 22:30:00,980 - org.springframework.boot.availability.ApplicationAvailabilityBean - [onApplicationEvent] - (DEBUG) - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC - 
+2025-08-04 22:30:00,990 - org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [doClose] - (DEBUG) - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@33faab13, started on Mon Aug 04 22:25:33 IST 2025 - 
+2025-08-04 22:30:01,072 - org.springframework.context.support.DefaultLifecycleProcessor - [stop] - (DEBUG) - Stopping beans in phase 2147482623 - 
+2025-08-04 22:30:01,079 - org.springframework.boot.web.embedded.tomcat.GracefulShutdown - [shutDownGracefully] - (INFO) - Commencing graceful shutdown. Waiting for active requests to complete - 
+2025-08-04 22:30:01,277 - org.springframework.boot.web.embedded.tomcat.GracefulShutdown - [doShutdown] - (INFO) - Graceful shutdown complete - 
+2025-08-04 22:30:01,277 - org.springframework.context.support.DefaultLifecycleProcessor - [stop] - (DEBUG) - Stopping beans in phase 2147481599 - 
+2025-08-04 22:30:01,279 - org.springframework.context.support.DefaultLifecycleProcessor - [lambda$doStop$5] - (DEBUG) - Bean 'webServerGracefulShutdown' completed its stop procedure - 
+2025-08-04 22:30:01,292 - org.springframework.context.support.DefaultLifecycleProcessor - [lambda$doStop$5] - (DEBUG) - Bean 'webServerStartStop' completed its stop procedure - 
+2025-08-04 22:30:01,293 - org.springframework.context.support.DefaultLifecycleProcessor - [stop] - (DEBUG) - Stopping beans in phase 1073741823 - 
+2025-08-04 22:30:01,296 - org.springframework.context.support.DefaultLifecycleProcessor - [lambda$doStop$5] - (DEBUG) - Bean 'applicationTaskExecutor' completed its stop procedure - 
+2025-08-04 22:30:01,296 - org.springframework.context.support.DefaultLifecycleProcessor - [stop] - (DEBUG) - Stopping beans in phase -2147483647 - 
+2025-08-04 22:30:01,312 - org.springframework.context.support.DefaultLifecycleProcessor - [lambda$doStop$5] - (DEBUG) - Bean 'springBootLoggingLifecycle' completed its stop procedure - 
+2025-08-04 22:30:01,326 - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [destroy] - (DEBUG) - Unregistering JMX-exposed beans on shutdown - 
+2025-08-04 22:30:01,329 - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [unregisterBeans] - (DEBUG) - Unregistering JMX-exposed beans - 
+2025-08-04 22:30:01,345 - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - [destroy] - (INFO) - Closing JPA EntityManagerFactory for persistence unit 'default' - 
+2025-08-04 22:30:01,365 - org.hibernate.internal.SessionFactoryImpl - [close] - (DEBUG) - HHH000031: Closing - 
+2025-08-04 22:30:01,396 - org.hibernate.type.spi.TypeConfiguration$Scope - [unsetSessionFactory] - (DEBUG) - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@20a731ce] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@5170e4ab] - 
+2025-08-04 22:30:01,403 - org.hibernate.service.internal.AbstractServiceRegistryImpl - [deRegisterChild] - (DEBUG) - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries - 
+2025-08-04 22:30:01,410 - org.hibernate.boot.registry.internal.BootstrapServiceRegistryImpl - [deRegisterChild] - (DEBUG) - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries - 
+2025-08-04 22:30:01,417 - com.zaxxer.hikari.HikariDataSource - [close] - (INFO) - HikariPool-6 - Shutdown initiated... - 
+2025-08-04 22:30:01,418 - com.zaxxer.hikari.pool.HikariPool - [logPoolState] - (DEBUG) - HikariPool-6 - Before shutdown stats (total=10/10, idle=10/10, active=0, waiting=0) - 
+2025-08-04 22:30:01,425 - com.zaxxer.hikari.pool.PoolBase - [quietlyCloseConnection] - (DEBUG) - HikariPool-6 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@57fd3552: (connection evicted) - 
+2025-08-04 22:30:01,442 - com.zaxxer.hikari.pool.PoolBase - [quietlyCloseConnection] - (DEBUG) - HikariPool-6 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@21e2f8bf: (connection evicted) - 
+2025-08-04 22:30:01,449 - com.zaxxer.hikari.pool.PoolBase - [quietlyCloseConnection] - (DEBUG) - HikariPool-6 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@60dff284: (connection evicted) - 
+2025-08-04 22:30:01,450 - com.zaxxer.hikari.pool.PoolBase - [quietlyCloseConnection] - (DEBUG) - HikariPool-6 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@51f532bc: (connection evicted) - 
+2025-08-04 22:30:01,451 - com.zaxxer.hikari.pool.PoolBase - [quietlyCloseConnection] - (DEBUG) - HikariPool-6 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@f00dcb: (connection evicted) - 
+2025-08-04 22:30:01,452 - com.zaxxer.hikari.pool.PoolBase - [quietlyCloseConnection] - (DEBUG) - HikariPool-6 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3f84fd46: (connection evicted) - 
+2025-08-04 22:30:01,452 - com.zaxxer.hikari.pool.PoolBase - [quietlyCloseConnection] - (DEBUG) - HikariPool-6 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4bef18a: (connection evicted) - 
+2025-08-04 22:30:01,452 - com.zaxxer.hikari.pool.PoolBase - [quietlyCloseConnection] - (DEBUG) - HikariPool-6 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@39cf7be5: (connection evicted) - 
+2025-08-04 22:30:01,453 - com.zaxxer.hikari.pool.PoolBase - [quietlyCloseConnection] - (DEBUG) - HikariPool-6 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4fffa65a: (connection evicted) - 
+2025-08-04 22:30:01,455 - com.zaxxer.hikari.pool.PoolBase - [quietlyCloseConnection] - (DEBUG) - HikariPool-6 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@62993747: (connection evicted) - 
+2025-08-04 22:30:01,456 - com.zaxxer.hikari.pool.HikariPool - [logPoolState] - (DEBUG) - HikariPool-6 - After  shutdown stats (total=0/10, idle=0/10, active=0, waiting=0) - 
+2025-08-04 22:30:01,456 - com.zaxxer.hikari.HikariDataSource - [close] - (INFO) - HikariPool-6 - Shutdown completed. - 
+2025-08-04 22:30:01,458 - org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [shutdown] - (DEBUG) - Shutting down ExecutorService 'applicationTaskExecutor' - 
+2025-08-04 22:30:02,132 - org.springframework.boot.devtools.restart.Restarter - [doStart] - (DEBUG) - Starting application com.enotes.Enotes.EnotesApplication with URLs [file:/D:/ENOTES/ENOTES_APPLICATION/ENOTES/Enotes/target/classes/] - 
+>>>>>>> Stashed changes
