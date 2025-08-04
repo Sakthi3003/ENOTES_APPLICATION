@@ -5,6 +5,7 @@ import com.enotes.Enotes.dto.CategoryDto;
 import com.enotes.Enotes.dto.UpdateCategoryDto;
 import com.enotes.Enotes.entity.Category;
 import com.enotes.Enotes.service.CategoryService;
+import com.enotes.Enotes.util.CommonUtil;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -36,9 +37,11 @@ public class CategoryController {
         Boolean savedCategory = categoryService.saveCategory(category);
 
         if(savedCategory) {
-            return new ResponseEntity<>("Category saved successfully", HttpStatus.CREATED);
+           return CommonUtil.createBuildResponse(savedCategory, HttpStatus.CREATED, "Saved successfully");
+         //   return new ResponseEntity<>("Category saved successfully", HttpStatus.CREATED);
         }else{
-            return new ResponseEntity<>("Category save failed. Try again later", HttpStatus.INTERNAL_SERVER_ERROR);
+            return CommonUtil.createErrorResponseMessage(savedCategory, HttpStatus.BAD_REQUEST, "Category already exists");
+          //  return new ResponseEntity<>("Category save failed. Try again later", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
