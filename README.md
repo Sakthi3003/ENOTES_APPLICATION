@@ -35,7 +35,9 @@ Todo Management
 Create, edit, and delete tasks.
 Assign priority levels to tasks (Low, Medium, High)
 Set task statuses like "To-Do", "In Progress", and "Completed".
-Set reminders for upcoming tasks (push notifications, email reminders).
+Set reminders for upcoming tasks (push notifications, email reminders.
+
+This project also support generic response to the requests being called
 
 Best practices 
 Global Exception handling 
