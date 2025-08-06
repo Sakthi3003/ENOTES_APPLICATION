@@ -40,10 +40,13 @@ Set reminders for upcoming tasks (push notifications, email reminders.
 This project also support generic response to the requests being called
 
 Best practices 
+---------------
+
 Global Exception handling 
 Auditing 
-Maintaining solid principle
-Thank You
+Maintaining solid principles
+Clean code
+
 
 
 
