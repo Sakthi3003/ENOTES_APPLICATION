@@ -61,4 +61,3 @@
 * **Clean code** with proper comments, naming conventions, and modular structure.
 
 ---
-to make that diagram?
